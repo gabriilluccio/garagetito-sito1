@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!- parte della linguetta del sito -!>
+  <link rel="icon" href="faccino.png">
+  <meta charset="UTF-8">
+  <title>Garage Tito</title>
+</head>
+<body style="background-color: darkgoldenrod;">
+<div class="intestazione">
+  <img src="faccino.png" alt="boh" class="logo">
+  <h1 class="font"> GARAGE TITO</h1>
+</div>
+<p><h3 class="font3">La vostra auto è in buone mani</h3></p>
+
+<div class="rettangolo1">
+  <button class="freccia" onclick="toggleElenco()">SERVIZI ⬇️</button>
+  <div id="elenco">
+    <ul>
+      <li>olio</li>
+      <li>gomme</li>
+      <li>freni</li>
+    </ul>
+  </div>
+</div>
+</body>
+<style>
+  .font3{
+    font-family: "Bauhaus 93";
+    font-size: 25px;
+    text-align: center;
+  }
+  .font{
+    font-family: "Wide Latin";
+    font-size: 40px;
+    text-align: center;
+  }
+  .intestazione{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .logo{
+    width: 40px;
+    height: 40px;
+  }
+  .rettangolo1 {
+  width: 200px;
+  background-color: pink;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px 0 10px 10px;
+  font-family: Sans-Serif;
+  position: relative;
+  text-align: left;
+    float: left;
+}
+
+.freccia {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: navy;
+}
+
+
+
+#elenco {
+  display: none;
+  margin-top: 10px;
+  background-color: #b3d4fc;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+#elenco ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#elenco li {
+  margin-bottom: 10px;
+}</style>
+<script>function toggleElenco() {
+  const elenco = document.getElementById("elenco");
+  const freccia = document.querySelector(".freccia");
+
+  if (elenco.style.display === "none" || elenco.style.display === "") {
+    elenco.style.display = "block";
+    freccia.textContent = "SERVIZI ⬆️";
+  } else {
+    elenco.style.display = "none";
+    freccia.textContent = "SERVIZI ⬇️";
+  }
+}</script>
+
+<div class="rettangolo2">
+  <div class="elenco2">
+    <p class="font1">Informazioni</p>
+    <ul class="font2">
+      <li><b>Luogo: 6600 Locarno Svizzera</b></li>
+      <li><b><a href="https://maps.app.goo.gl/cSn9QEtbuKPLDbgs8" target="_blank">Indirizzo: Via Rinaldo Simen 22</a></b></li>
+      <li><b>Tel:<a href="tel: +41792006166"> (+41) 079 220 61 66</a></b> </li>
+      <li><b>Email:<a href="mailto:garage.jm.tito@gmail.com"> garage.jm.tito@gmail.com</a></b></li>
+      <li><b>Giorni: Lunedì - Sabato</b></li>
+      <li><b>Orari: 07:30 - 19:00</b></li>
+      <li>&nbsp;</li>
+      <li><a href="https://www.instagram.com/garagetito?igsh=MWdxdzhsbHd5cHV6cg==" target="_blank"><img src="instagram.png" alt="Logo Instagram" style="width: 50px;height: 50px" ></a></li>
+    </ul>
+  </div>
+</div>
+<style>
+  .rettangolo2{
+    width: 400px;
+    height: 300px;
+    background-color: pink;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px 0 10px 10px;
+    font-family: Sans-Serif;
+    position: relative;
+    text-align: left;
+    float: right;
+  }
+  .font1{
+    font-family: "Cooper Black";
+    font-size: 30px;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .font2{
+    font-family: Arial;
+    font-size: 15px;
+    text-align: left;
+
+  }
+</style>
+</body>
+</html>
